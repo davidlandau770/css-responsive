@@ -182,7 +182,35 @@ main .mainCard div > p {
   font-weight: 600;
   padding-top: 15px;
 }
-
+main .images {
+  display: flex;
+}
+main .images img {
+  height: 100%;
+  width: 50vw;
+}
+main .images .imageRight {
+  width: 50vw;
+  border-top-left-radius: 180px;
+  background-color: #fff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 10% 60px 8%;
+}
+main .images .imageRight h2 {
+    font-size: 1.5em;
+    color: #0f1320;
+}
+main .images .imageRight p {
+    font-size: 0.7em;
+  color: #6f7179;
+  line-height: 1.5;
+}
+main .images #titleImage {
+  font-weight: 600;
+}
 @media (max-width: 850px) {
   header {
     grid-template-areas:
@@ -235,5 +263,19 @@ main .mainCard div > p {
   main .mainCard #rightCard {
     width: 92%;
     margin: 0 auto 20px;
+  }
+  main .images {
+    flex-direction: column;
+    height: auto;
+  }
+  main .images img {
+    width: 100%;
+      transform: scaleX(-1);
+
+  }
+  main .images .imageRight {
+    border-top-left-radius: 0;
+    border-top-right-radius: 180px;
+    width: 100%;
   }
 }
