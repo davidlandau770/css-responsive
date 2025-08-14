@@ -31,15 +31,13 @@ header {
   /* border: 1px solid red; */
   align-items: center;
   font-size: 0.8em;
-  /* position: sticky; */
-  top: 0;
 }
 #header1 {
   grid-area: header1;
   justify-content: left;
   gap: 8px;
   margin-left: 20px;
-  margin-bottom: 8px;
+  padding-bottom: 8px;
 }
 #header2 {
   grid-area: header2;
@@ -200,17 +198,18 @@ main .images .imageRight {
   padding: 60px 10% 60px 8%;
 }
 main .images .imageRight h2 {
-    font-size: 1.5em;
-    color: #0f1320;
+  font-size: 1.5em;
+  color: #0f1320;
 }
 main .images .imageRight p {
-    font-size: 0.7em;
+  font-size: 0.7em;
   color: #6f7179;
   line-height: 1.5;
 }
 main .images #titleImage {
   font-weight: 600;
 }
+
 @media (max-width: 850px) {
   header {
     grid-template-areas:
@@ -218,7 +217,7 @@ main .images #titleImage {
       ". div div div ."
       "phones phones phones phones phones";
     grid-template-columns: 6% 40% 8% 40% 6%;
-    grid-template-rows: 100px 70vh 75vh;
+    grid-template-rows: 100px 70vh auto;
   }
   header #logoTokners {
     width: 70px;
@@ -269,9 +268,10 @@ main .images #titleImage {
     height: auto;
   }
   main .images img {
+    transform: scaleX(-1);
+    height: auto;
+    max-height: 400px;
     width: 100%;
-      transform: scaleX(-1);
-
   }
   main .images .imageRight {
     border-top-left-radius: 0;
